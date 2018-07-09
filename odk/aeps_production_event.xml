@@ -3,21 +3,23 @@
     <h:title>AEPS - Evento productivo</h:title>
     <model>
       <instance>
-        <data id="build_Untitled-Form_1530715480">
+        <data id="build_Untitled-Form_1530824870">
           <meta>
             <instanceID/>
             <instanceName/>
           </meta>
           <technical_assistant>
             <assistant_partnership/>
-            <assistant_kind_document/>
+            <assistant_kind_document>
+              1
+            </assistant_kind_document>
             <assistant_document_number/>
             <assistant_name/>
             <assistant_last_name/>
             <assistant_cellphone/>
             <assistant_sex/>
             <assistant_country>
-              1
+              pe
             </assistant_country>
             <assistant_state>
               1
@@ -38,7 +40,7 @@
               1
             </farmer_sex>
             <farmer_country>
-              1
+              pe
             </farmer_country>
             <farmer_state>
               1
@@ -50,6 +52,7 @@
             <farmer_email/>
           </farmer>
           <farm>
+            <farm_id/>
             <farm_name/>
             <farm_location/>
             <farm_address_comments/>
@@ -86,10 +89,10 @@
               <advanced>
                 false
               </advanced>
+              <production_event_advanced>
+                <humidity/>
+              </production_event_advanced>
             </production_event_intermediate>
-            <production_event_advanced>
-              <humidity/>
-            </production_event_advanced>
           </production_event>
           <phenological_cycle>
             <planting_date/>
@@ -109,10 +112,10 @@
               <phenological_advanced>
                 false
               </phenological_advanced>
+              <phenological_cycle_advanced>
+                <overseeding/>
+              </phenological_cycle_advanced>
             </phenological_cycle_intermediate>
-            <phenological_cycle_advanced>
-              <overseeding/>
-            </phenological_cycle_advanced>
           </phenological_cycle>
           <agronomy_practices>
             <agronomy_practice_fertilization_type>
@@ -155,7 +158,9 @@
                 <monitoring_notes_advanced/>
               </agronomy_practice_monitoring_advanced>
             </agronomy_practice_monitoring>
-            <agronomy_practice_prepare_soil_type/>
+            <agronomy_practice_prepare_soil_type>
+              1
+            </agronomy_practice_prepare_soil_type>
             <agronomy_practice_prepare_soil jr:template="">
               <prepare_soil_type>
                 1
@@ -228,12 +233,15 @@
             </harvest_intermediate>
             <harvest_group_intermediate>
               <harvest_products_intermediate/>
+              <harvest_advanced>
+                false
+              </harvest_advanced>
+              <harvest_group_advanced jr:template="">
+                <harvest_products_advanced/>
+                <harvest_products_count_advanced/>
+                <harvest_products_weight_advanced/>
+              </harvest_group_advanced>
             </harvest_group_intermediate>
-            <harvest_group_advanced jr:template="">
-              <harvest_products_advanced/>
-              <harvest_products_count_advanced/>
-              <harvest_products_weight_advanced/>
-            </harvest_group_advanced>
           </harvest>
           <irrigation>
             <irrigation_done>
@@ -247,14 +255,14 @@
               <irrigation_advanced>
                 false
               </irrigation_advanced>
+              <irrigation_level_advanced>
+                <irrigation_transfer_date_advanced/>
+                <irrigation_sheet_advanced jr:template="">
+                  <irrigation_sheet_level_advanced/>
+                  <irrigation_sheet_description_advanced/>
+                </irrigation_sheet_advanced>
+              </irrigation_level_advanced>
             </irrigation_level_intermediate>
-            <irrigation_level_advanced>
-              <irrigation_transfer_date_advanced/>
-              <irrigation_sheet_advanced jr:template="">
-                <irrigation_sheet_level_advanced/>
-                <irrigation_sheet_description_advanced/>
-              </irrigation_sheet_advanced>
-            </irrigation_level_advanced>
           </irrigation>
         </data>
       </instance>
@@ -279,7 +287,7 @@
             <value></value>
           </text>
           <text id="/data/technical_assistant/assistant_kind_document:option0">
-            <value>Cédula</value>
+            <value>Cedula</value>
           </text>
           <text id="/data/technical_assistant/assistant_kind_document:option1">
             <value>Pasaporte</value>
@@ -369,7 +377,7 @@
             <value>Tipo de documento</value>
           </text>
           <text id="/data/farmer/farmer_kind_document:option0">
-            <value>Cédula</value>
+            <value>Cedula</value>
           </text>
           <text id="/data/farmer/farmer_kind_document:option1">
             <value>Pasaporte</value>
@@ -454,6 +462,9 @@
           </text>
           <text id="/data/farm:label">
             <value>Finca</value>
+          </text>
+          <text id="/data/farm/farm_id:label">
+            <value>Código de la finca</value>
           </text>
           <text id="/data/farm/farm_name:label">
             <value>Nombre de la finca</value>
@@ -606,7 +617,7 @@
             <value>Desea adicionar información de nivel intermedio</value>
           </text>
           <text id="/data/production_event/intermediate:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/production_event/intermediate:option1">
             <value>No</value>
@@ -645,21 +656,21 @@
             <value>Desea adicionar información de nivel avanzado</value>
           </text>
           <text id="/data/production_event/production_event_intermediate/advanced:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/production_event/production_event_intermediate/advanced:option1">
             <value>No</value>
           </text>
-          <text id="/data/production_event/production_event_advanced:label">
+          <text id="/data/production_event/production_event_intermediate/production_event_advanced:label">
             <value>Evento productivo nivel avanzado</value>
           </text>
-          <text id="/data/production_event/production_event_advanced/humidity:label">
+          <text id="/data/production_event/production_event_intermediate/production_event_advanced/humidity:label">
             <value>Porcentaje de húmedad</value>
           </text>
-          <text id="/data/production_event/production_event_advanced/humidity:hint">
+          <text id="/data/production_event/production_event_intermediate/production_event_advanced/humidity:hint">
             <value></value>
           </text>
-          <text id="/data/production_event/production_event_advanced/humidity:requiredMsg">
+          <text id="/data/production_event/production_event_intermediate/production_event_advanced/humidity:requiredMsg">
             <value>El porcentaje de humedad es obligatoria</value>
           </text>
           <text id="/data/phenological_cycle:label">
@@ -729,7 +740,7 @@
             <value>false</value>
           </text>
           <text id="/data/phenological_cycle/phenological_intermediate:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/phenological_cycle/phenological_intermediate:option1">
             <value>No</value>
@@ -765,21 +776,21 @@
             <value>Desea adicionar información de nivel avanzado en el ciclo fenológico</value>
           </text>
           <text id="/data/phenological_cycle/phenological_cycle_intermediate/phenological_advanced:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/phenological_cycle/phenological_cycle_intermediate/phenological_advanced:option1">
             <value>No</value>
           </text>
-          <text id="/data/phenological_cycle/phenological_cycle_advanced:label">
+          <text id="/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced:label">
             <value>Ciclo fenológico nivel avanzado</value>
           </text>
-          <text id="/data/phenological_cycle/phenological_cycle_advanced/overseeding:label">
+          <text id="/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding:label">
             <value>Porcentaje de resiembra</value>
           </text>
-          <text id="/data/phenological_cycle/phenological_cycle_advanced/overseeding:requiredMsg">
+          <text id="/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding:requiredMsg">
             <value>El porcentaje de resiembra es obligatorio</value>
           </text>
-          <text id="/data/phenological_cycle/phenological_cycle_advanced/overseeding:constraintMsg">
+          <text id="/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding:constraintMsg">
             <value>El porcentaje de resiembra debe estar entre 0 y 100</value>
           </text>
           <text id="/data/agronomy_practices:label">
@@ -1308,7 +1319,7 @@
             <value>Desea adicionar información de nivel intermedio</value>
           </text>
           <text id="/data/harvest/harvest_intermediate:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/harvest/harvest_intermediate:option1">
             <value>No</value>
@@ -1322,31 +1333,40 @@
           <text id="/data/harvest/harvest_group_intermediate/harvest_products_intermediate:option0">
             <value></value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced:label">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_advanced:label">
+            <value>Desea adicionar información de nivel avanzado</value>
+          </text>
+          <text id="/data/harvest/harvest_group_intermediate/harvest_advanced:option0">
+            <value>Si</value>
+          </text>
+          <text id="/data/harvest/harvest_group_intermediate/harvest_advanced:option1">
+            <value>No</value>
+          </text>
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced:label">
             <value>Información avanzada de cosecha</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_advanced:label">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_advanced:label">
             <value>Producto cosechado</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_advanced:option0">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_advanced:option0">
             <value></value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_count_advanced:label">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced:label">
             <value>Cantidad de sacos obtenidos por el producto</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_count_advanced:requiredMsg">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced:requiredMsg">
             <value>La cantidad de sacos por producto es obligatorio</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_count_advanced:constraintMsg">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced:constraintMsg">
             <value>La cantidad de sacos por producto debe ser mayor a 0</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_weight_advanced:label">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced:label">
             <value>Peso por saco</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_weight_advanced:requiredMsg">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced:requiredMsg">
             <value>El peso por saco es obligatorio</value>
           </text>
-          <text id="/data/harvest/harvest_group_advanced/harvest_products_weight_advanced:constraintMsg">
+          <text id="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced:constraintMsg">
             <value>El peso por saco debe ser mayor a 0</value>
           </text>
           <text id="/data/irrigation:label">
@@ -1356,7 +1376,7 @@
             <value>Ha realizado riego en el cultivo?</value>
           </text>
           <text id="/data/irrigation/irrigation_done:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/irrigation/irrigation_done:option1">
             <value>No</value>
@@ -1365,7 +1385,7 @@
             <value>Desea adicionar información de nivel intermedio</value>
           </text>
           <text id="/data/irrigation/irrigation_intermediate:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/irrigation/irrigation_intermediate:option1">
             <value>No</value>
@@ -1386,52 +1406,52 @@
             <value>Desea adicionar información de nivel avanzado</value>
           </text>
           <text id="/data/irrigation/irrigation_level_intermediate/irrigation_advanced:option0">
-            <value>Sí</value>
+            <value>Si</value>
           </text>
           <text id="/data/irrigation/irrigation_level_intermediate/irrigation_advanced:option1">
             <value>No</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced:label">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced:label">
             <value>Riego nivel avanzado</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced:label">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced:label">
             <value>Fecha de mantenimiento de lámina de agua luego de trasplante</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced:requiredMsg">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced:requiredMsg">
             <value>La fecha de mantenimiento de lámina de agua luego de trasplante es obligatoria</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced:constraintMsg">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced:constraintMsg">
             <value>La fecha de mantenimiento de lámina de agua luego de trasplante debe ser mayor a la fecha de siembra</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced:label">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced:label">
             <value>Lámina de agua</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:label">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:label">
             <value>Lámina de agua del lote (cm)</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:requiredMsg">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:requiredMsg">
             <value>La lámina de agua del lote es obligatoria</value>
           </text>
-          <text id="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced:label">
+          <text id="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced:label">
             <value>Descripción de la medición</value>
           </text>
         </translation>
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-      <bind nodeset="/data/meta/instanceName" type="string" calculate="concat('AEPS - Evento productivo','')"/>
+      <bind nodeset="/data/meta/instanceName" type="string" calculate="'aeps-'"/>
       <bind nodeset="/data/technical_assistant/assistant_partnership" type="select1" required="true()"/>
       <bind nodeset="/data/technical_assistant/assistant_kind_document" type="select1" required="true()"/>
       <bind nodeset="/data/technical_assistant/assistant_document_number" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_document_number:requiredMsg')" constraint="(regex(., '[0-9]+'))" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_document_number:constraintMsg')"/>
-      <bind nodeset="/data/technical_assistant/assistant_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_name:requiredMsg')" constraint="(regex(., '[\p{L}\s'.-]+'))" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_name:constraintMsg')"/>
-      <bind nodeset="/data/technical_assistant/assistant_last_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_last_name:requiredMsg')" constraint="(regex(., '[\p{L}\s'.-]+'))" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_last_name:constraintMsg')"/>
-      <bind nodeset="/data/technical_assistant/assistant_cellphone" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_cellphone:requiredMsg')" constraint="(regex(., '\d{1,4}(\s)?\d{10,15}'))" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_cellphone:constraintMsg')"/>
+      <bind nodeset="/data/technical_assistant/assistant_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_name:requiredMsg')" calculate="pulldata('people','name','document_key',/data/technical_assistant/assistant_document_number)" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_name:constraintMsg')"/>
+      <bind nodeset="/data/technical_assistant/assistant_last_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_last_name:requiredMsg')" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_last_name:constraintMsg')"/>
+      <bind nodeset="/data/technical_assistant/assistant_cellphone" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_cellphone:requiredMsg')" constraint="(regex(., '^\d{1,4}(\s)?\d{10,15}$'))" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_cellphone:constraintMsg')"/>
       <bind nodeset="/data/technical_assistant/assistant_sex" type="select1" required="true()"/>
       <bind nodeset="/data/technical_assistant/assistant_country" type="select1" required="true()"/>
       <instance id="choices_technical-assistant-assistant-country">
         <root>
           <item>
             <itextId>/data/technical_assistant/assistant_country:option0</itextId>
-            <value>1</value>
+            <value>pe</value>
           </item>
         </root>
       </instance>
@@ -1457,19 +1477,19 @@
         </root>
       </instance>
       <bind nodeset="/data/technical_assistant/assistant_address" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_address:requiredMsg')"/>
-      <bind nodeset="/data/technical_assistant/assistant_email" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_email:requiredMsg')" constraint="(regex(., '[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*'))" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_email:constraintMsg')"/>
+      <bind nodeset="/data/technical_assistant/assistant_email" type="string" required="true()" jr:requiredMsg="jr:itext('/data/technical_assistant/assistant_email:requiredMsg')" jr:constraintMsg="jr:itext('/data/technical_assistant/assistant_email:constraintMsg')"/>
       <bind nodeset="/data/farmer/farmer_kind_document" type="select1" required="true()"/>
       <bind nodeset="/data/farmer/farmer_document_number" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_document_number:requiredMsg')" constraint="(regex(., '[0-9]+'))" jr:constraintMsg="jr:itext('/data/farmer/farmer_document_number:constraintMsg')"/>
-      <bind nodeset="/data/farmer/farmer_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_name:requiredMsg')" constraint="(regex(., '[\p{L}\s'.-]+'))" jr:constraintMsg="jr:itext('/data/farmer/farmer_name:constraintMsg')"/>
-      <bind nodeset="/data/farmer/farmer_last_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_last_name:requiredMsg')" constraint="(regex(., '[\p{L}\s'.-]+'))" jr:constraintMsg="jr:itext('/data/farmer/farmer_last_name:constraintMsg')"/>
-      <bind nodeset="/data/farmer/farmer_cellphone" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_cellphone:requiredMsg')" constraint="(regex(., '\d{1,4}(\s)?\d{10,15}'))" jr:constraintMsg="jr:itext('/data/farmer/farmer_cellphone:constraintMsg')"/>
+      <bind nodeset="/data/farmer/farmer_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_name:requiredMsg')" jr:constraintMsg="jr:itext('/data/farmer/farmer_name:constraintMsg')"/>
+      <bind nodeset="/data/farmer/farmer_last_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_last_name:requiredMsg')" jr:constraintMsg="jr:itext('/data/farmer/farmer_last_name:constraintMsg')"/>
+      <bind nodeset="/data/farmer/farmer_cellphone" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_cellphone:requiredMsg')" jr:constraintMsg="jr:itext('/data/farmer/farmer_cellphone:constraintMsg')"/>
       <bind nodeset="/data/farmer/farmer_sex" type="select1" required="true()"/>
       <bind nodeset="/data/farmer/farmer_country" type="select1" required="true()"/>
       <instance id="choices_farmer-farmer-country">
         <root>
           <item>
             <itextId>/data/farmer/farmer_country:option0</itextId>
-            <value>1</value>
+            <value>pe</value>
           </item>
         </root>
       </instance>
@@ -1495,7 +1515,8 @@
         </root>
       </instance>
       <bind nodeset="/data/farmer/farmer_address" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_address:requiredMsg')"/>
-      <bind nodeset="/data/farmer/farmer_email" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_email:requiredMsg')" constraint="(regex(., '[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*'))" jr:constraintMsg="jr:itext('/data/farmer/farmer_email:constraintMsg')"/>
+      <bind nodeset="/data/farmer/farmer_email" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farmer/farmer_email:requiredMsg')" jr:constraintMsg="jr:itext('/data/farmer/farmer_email:constraintMsg')"/>
+      <bind nodeset="/data/farm/farm_id" type="int"/>
       <bind nodeset="/data/farm/farm_name" type="string" required="true()" jr:requiredMsg="jr:itext('/data/farm/farm_name:requiredMsg')"/>
       <bind nodeset="/data/farm/farm_location" type="geopoint" required="true()"/>
       <bind nodeset="/data/farm/farm_address_comments" type="string"/>
@@ -1511,99 +1532,79 @@
       <bind nodeset="/data/production_event/seed_certified" type="select1" required="true()"/>
       <bind nodeset="/data/production_event/seed_count" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/seed_count:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/seed_count:constraintMsg')"/>
       <bind nodeset="/data/production_event/intermediate" type="select1" required="true()"/>
-      <bind nodeset="/data/production_event/production_event_intermediate" relevant="(${intermediate} = 'true')"/>
-      <bind nodeset="/data/production_event/production_event_intermediate/population_density" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/population_density:requiredMsg')" relevant="(${intermediate} = 'true')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/production_event_intermediate/population_density:constraintMsg')"/>
-      <bind nodeset="/data/production_event/production_event_intermediate/grooves_distance" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/grooves_distance:requiredMsg')" relevant="(${intermediate} = 'true')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/production_event_intermediate/grooves_distance:constraintMsg')"/>
-      <bind nodeset="/data/production_event/production_event_intermediate/sites_distance" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/sites_distance:requiredMsg')" relevant="(${intermediate} = 'true')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/production_event_intermediate/sites_distance:constraintMsg')"/>
-      <bind nodeset="/data/production_event/production_event_intermediate/advanced" type="select1" required="true()" relevant="(${intermediate} = 'true')"/>
-      <bind nodeset="/data/production_event/production_event_advanced" relevant="(${advanced} = 'true')"/>
-      <bind nodeset="/data/production_event/production_event_advanced/humidity" type="decimal" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_advanced/humidity:requiredMsg')" relevant="(${advanced} = 'true')" constraint="(. &gt;= '0') and (. &lt;= '100')" jr:constraintMsg="Value must be between 0 and 100"/>
+      <bind nodeset="/data/production_event/production_event_intermediate/population_density" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/population_density:requiredMsg')" relevant="(selected(/data/production_event/intermediate, 'true'))" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/production_event_intermediate/population_density:constraintMsg')"/>
+      <bind nodeset="/data/production_event/production_event_intermediate/grooves_distance" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/grooves_distance:requiredMsg')" relevant="(selected(/data/production_event/intermediate, 'true'))" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/production_event_intermediate/grooves_distance:constraintMsg')"/>
+      <bind nodeset="/data/production_event/production_event_intermediate/sites_distance" type="int" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/sites_distance:requiredMsg')" relevant="(selected(/data/production_event/intermediate, 'true'))" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/production_event/production_event_intermediate/sites_distance:constraintMsg')"/>
+      <bind nodeset="/data/production_event/production_event_intermediate/advanced" type="select1" required="true()" relevant="(selected(/data/production_event/intermediate, 'true'))"/>
+      <bind nodeset="/data/production_event/production_event_intermediate/production_event_advanced/humidity" type="decimal" required="true()" jr:requiredMsg="jr:itext('/data/production_event/production_event_intermediate/production_event_advanced/humidity:requiredMsg')" relevant="(selected(/data/production_event/intermediate, 'true')) and (selected(/data/production_event/production_event_intermediate/advanced, 'true'))" constraint="(. &gt;= '0') and (. &lt;= '100')" jr:constraintMsg="Value must be between 0 and 100"/>
       <bind nodeset="/data/phenological_cycle/planting_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/planting_date:requiredMsg')"/>
       <bind nodeset="/data/phenological_cycle/planting_method" type="select1" required="true()"/>
       <bind nodeset="/data/phenological_cycle/phenological_cycle_transfer/transfer_type" type="select1" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_transfer/transfer_type:requiredMsg')" relevant="(selected(/data/phenological_cycle/planting_method, '2'))"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_transfer/transfer_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_transfer/transfer_date:requiredMsg')" relevant="(selected(/data/phenological_cycle/planting_method, '2'))" constraint="(${planting_date} &lt; ${transfer_date})" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_transfer/transfer_date:constraintMsg')"/>
+      <bind nodeset="/data/phenological_cycle/phenological_cycle_transfer/transfer_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_transfer/transfer_date:requiredMsg')" relevant="(selected(/data/phenological_cycle/planting_method, '2'))" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_transfer/transfer_date:constraintMsg')"/>
       <bind nodeset="/data/phenological_cycle/planting_area" type="int" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/planting_area:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/phenological_cycle/planting_area:constraintMsg')"/>
       <bind nodeset="/data/phenological_cycle/phenological_intermediate" type="select1" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_intermediate:requiredMsg')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate" relevant="(${phenological_intermediate} = 'true')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/emergency_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/emergency_date:requiredMsg')" relevant="(${phenological_intermediate} = 'true')" constraint="(${planting_date} &lt; ${emergency_date})" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/emergency_date:constraintMsg')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/flowering_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/flowering_date:requiredMsg')" relevant="(${phenological_intermediate} = 'true')" constraint="(${emergency_date} &lt; ${flowering_date})" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/flowering_date:constraintMsg')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/phenological_product" type="string" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/phenological_product:requiredMsg')" relevant="(${phenological_intermediate} = 'true')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/phenological_advanced" type="select1" required="true()" relevant="(${phenological_intermediate} = 'true')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_advanced" relevant="(${phenological_advanced} = 'true')"/>
-      <bind nodeset="/data/phenological_cycle/phenological_cycle_advanced/overseeding" type="decimal" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_advanced/overseeding:requiredMsg')" relevant="(${phenological_advanced} = 'true')" constraint="(. &gt;= '0') and (. &lt;= '100')" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_advanced/overseeding:constraintMsg')"/>
+      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/emergency_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/emergency_date:requiredMsg')" relevant="(selected(/data/phenological_cycle/phenological_intermediate, 'true'))" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/emergency_date:constraintMsg')"/>
+      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/flowering_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/flowering_date:requiredMsg')" relevant="(selected(/data/phenological_cycle/phenological_intermediate, 'true'))" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/flowering_date:constraintMsg')"/>
+      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/phenological_product" type="string" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/phenological_product:requiredMsg')" relevant="(selected(/data/phenological_cycle/phenological_intermediate, 'true'))"/>
+      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/phenological_advanced" type="select1" required="true()" relevant="(selected(/data/phenological_cycle/phenological_intermediate, 'true'))"/>
+      <bind nodeset="/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding" type="decimal" required="true()" jr:requiredMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding:requiredMsg')" relevant="(selected(/data/phenological_cycle/phenological_intermediate, 'true')) and (selected(/data/phenological_cycle/phenological_cycle_intermediate/phenological_advanced, 'true'))" constraint="(. &gt;= '0') and (. &lt;= '100')" jr:constraintMsg="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding:constraintMsg')"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization_type" type="select1" required="true()"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/fertilization_type" type="select1"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate" relevant="(${agronomy_practice_fertilization_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate/fertilization_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate/fertilization_type_count_intermediate:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 2)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate/fertilization_type_count_intermediate:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced" relevant="(${agronomy_practice_fertilization_type} = 3)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_type_count_advanced:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_type_count_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_date_advanced:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 3)" constraint="(${planting_date} &lt; ${fertilization_date_advanced})" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_date_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced" relevant="(${agronomy_practice_fertilization_type} = 3) and (${fertilization_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_advanced" type="string" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_advanced:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 3) and (${fertilization_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_n_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_n_advanced:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 3) and (${fertilization_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_p_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_p_advanced:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 3) and (${fertilization_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_k_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_k_advanced:requiredMsg')" relevant="(${agronomy_practice_fertilization_type} = 3) and (${fertilization_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_organic_advanced" type="select1" required="true()" relevant="(${agronomy_practice_fertilization_type} = 3) and (${fertilization_type} = 3)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_notes_advanced" type="string" relevant="(${agronomy_practice_fertilization_type} = 3)"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate/fertilization_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate/fertilization_type_count_intermediate:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_intermediate/fertilization_type_count_intermediate:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_type_count_advanced:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_type_count_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_date_advanced:requiredMsg')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_date_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_advanced" type="string" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_advanced:requiredMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_n_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_n_advanced:requiredMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_p_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_p_advanced:requiredMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_k_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_chemical_advanced/formula_k_advanced:requiredMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_organic_advanced" type="select1" required="true()"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_fertilization/agronomy_practice_fertilization_advanced/fertilization_notes_advanced" type="string"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring_type" type="select1" required="true()"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/monitoring_type" type="select1"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate" relevant="(${agronomy_practice_monitoring_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate/monitoring_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate/monitoring_type_count_intermediate:requiredMsg')" relevant="(${agronomy_practice_monitoring_type} = 2)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate/monitoring_type_count_intermediate:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced" relevant="(${agronomy_practice_monitoring_type} = 3)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_type_count_advance" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_type_count_advance:requiredMsg')" relevant="(${agronomy_practice_monitoring_type} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_type_count_advance:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_date_advanced:requiredMsg')" relevant="(${agronomy_practice_monitoring_type} = 3)" constraint="(${planting_date} &lt; ${monitoring_date_advanced})" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_date_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/weeds_epoch" type="select1" required="true()" relevant="(${agronomy_practice_monitoring_type} = 3) and (${monitoring_type} = 4)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_notes_advanced" type="string" relevant="(${agronomy_practice_monitoring_type} = 3)"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate/monitoring_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate/monitoring_type_count_intermediate:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_intermediate/monitoring_type_count_intermediate:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_type_count_advance" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_type_count_advance:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_type_count_advance:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_date_advanced:requiredMsg')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_date_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/weeds_epoch" type="select1" required="true()"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_monitoring/agronomy_practice_monitoring_advanced/monitoring_notes_advanced" type="string"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil_type" type="select1" required="true()"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/prepare_soil_type" type="select1" required="true()"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate" relevant="(${agronomy_practice_prepare_soil_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate/prepare_soil_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate/prepare_soil_type_count_intermediate:requiredMsg')" relevant="(${agronomy_practice_prepare_soil_type} = 2)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate/prepare_soil_type_count_intermediate:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced" relevant="(${agronomy_practice_prepare_soil_type} = 3)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_type_count_advanced:requiredMsg')" relevant="(${agronomy_practice_prepare_soil_type} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_type_count_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_date_advanced:requiredMsg')" relevant="(${agronomy_practice_prepare_soil_type} = 3)" constraint="(${planting_date} &lt; ${prepare_soil_date_advanced})" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_date_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_notes_advanced" type="string" relevant="(${agronomy_practice_prepare_soil_type} = 3)"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate/prepare_soil_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate/prepare_soil_type_count_intermediate:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_intermediate/prepare_soil_type_count_intermediate:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_type_count_advanced:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_type_count_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_date_advanced:requiredMsg')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_date_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_prepare_soil/agronomy_practice_prepare_soil_advanced/prepare_soil_notes_advanced" type="string"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble_type" type="select1" required="true()"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/stubble_type" type="select1" required="true()"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate" relevant="(${agronomy_practice_stubble_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate/stubble_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate/stubble_type_count_intermediate:requiredMsg')" relevant="(${agronomy_practice_stubble_type} = 2)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate/stubble_type_count_intermediate:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced" relevant="(${agronomy_practice_stubble_type} = 3)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_type_count_advanced:requiredMsg')" relevant="(${agronomy_practice_stubble_type} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_type_count_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_date_advanced:requiredMsg')" relevant="(${agronomy_practice_stubble_type} = 3)" constraint="(${planting_date} &lt; ${stubble_date_advanced})" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_date_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_notes_advanced" type="string" relevant="(${agronomy_practice_stubble_type} = 3)"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate/stubble_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate/stubble_type_count_intermediate:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_intermediate/stubble_type_count_intermediate:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_type_count_advanced:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_type_count_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_date_advanced:requiredMsg')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_date_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_stubble/agronomy_practice_stubble_advanced/stubble_notes_advanced" type="string"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary_type" type="select1" required="true()"/>
       <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/phytosanitary_type" type="select1" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/phytosanitary_type:requiredMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate" relevant="(${agronomy_practice_phytosanitary_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate/phytosanitary_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate/phytosanitary_type_count_intermediate:requiredMsg')" relevant="(${agronomy_practice_phytosanitary_type} = 2)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate/phytosanitary_type_count_intermediate:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced" relevant="(${agronomy_practice_phytosanitary_type} = 3)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_type_count_advanced:requiredMsg')" relevant="(${agronomy_practice_phytosanitary_type} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_type_count_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_date_advanced:requiredMsg')" relevant="(${agronomy_practice_phytosanitary_type} = 3)" constraint="(${planting_date} &lt; ${phytosanitary_date_advanced})" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_date_advanced:constraintMsg')"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_plague_advanced" relevant="(${agronomy_practice_phytosanitary_type} = 3) and (${phytosanitary_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_plague_advanced/plague_product_advanced" type="select1" required="true()" relevant="(${agronomy_practice_phytosanitary_type} = 3) and (${phytosanitary_type} = 2)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_weeds_advanced" relevant="(${agronomy_practice_phytosanitary_type} = 3) and (${phytosanitary_type} = 4)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_weeds_advanced/weeds_product_advanced" type="select1" required="true()" relevant="(${agronomy_practice_phytosanitary_type} = 3) and (${phytosanitary_type} = 4)"/>
-      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_notes_advanced" type="string" relevant="(${agronomy_practice_phytosanitary_type} = 3)"/>
-      <bind nodeset="/data/harvest/harvest_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_date:requiredMsg')" constraint="(${planting_date} &lt; ${harvest_date})" jr:constraintMsg="jr:itext('/data/harvest/harvest_date:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate/phytosanitary_type_count_intermediate" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate/phytosanitary_type_count_intermediate:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_intermediate/phytosanitary_type_count_intermediate:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_type_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_type_count_advanced:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_type_count_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_date_advanced:requiredMsg')" jr:constraintMsg="jr:itext('/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_date_advanced:constraintMsg')"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_plague_advanced/plague_product_advanced" type="select1" required="true()"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_weeds_advanced/weeds_product_advanced" type="select1" required="true()"/>
+      <bind nodeset="/data/agronomy_practices/agronomy_practice_phytosanitary/agronomy_practice_phytosanitary_advanced/phytosanitary_notes_advanced" type="string"/>
+      <bind nodeset="/data/harvest/harvest_date" type="date" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_date:requiredMsg')" jr:constraintMsg="jr:itext('/data/harvest/harvest_date:constraintMsg')"/>
       <bind nodeset="/data/harvest/harvest_method" type="select1" required="true()"/>
       <bind nodeset="/data/harvest/harvest_area" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_area:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_area:constraintMsg')"/>
       <bind nodeset="/data/harvest/harvest_crop_production" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_crop_production:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_crop_production:constraintMsg')"/>
       <bind nodeset="/data/harvest/harvest_yield_unit" type="select1" required="true()"/>
       <bind nodeset="/data/harvest/harvest_yield" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_yield:requiredMsg')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_yield:constraintMsg')"/>
       <bind nodeset="/data/harvest/harvest_intermediate" type="select1" required="true()"/>
-      <bind nodeset="/data/harvest/harvest_group_intermediate" relevant="(${harvest_intermediate} = 2)"/>
-      <bind nodeset="/data/harvest/harvest_group_intermediate/harvest_products_intermediate" type="select" required="true()" relevant="(${harvest_intermediate} = 2)"/>
-      <bind nodeset="/data/harvest/harvest_group_advanced" relevant="(${harvest_intermediate} = 3)"/>
-      <bind nodeset="/data/harvest/harvest_group_advanced/harvest_products_advanced" type="select1" required="true()" relevant="(${harvest_intermediate} = 3)"/>
-      <bind nodeset="/data/harvest/harvest_group_advanced/harvest_products_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_count_advanced:requiredMsg')" relevant="(${harvest_intermediate} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_count_advanced:constraintMsg')"/>
-      <bind nodeset="/data/harvest/harvest_group_advanced/harvest_products_weight_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_weight_advanced:requiredMsg')" relevant="(${harvest_intermediate} = 3)" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_weight_advanced:constraintMsg')"/>
+      <bind nodeset="/data/harvest/harvest_group_intermediate/harvest_products_intermediate" type="select" required="true()" relevant="(selected(/data/harvest/harvest_intermediate, 'true'))"/>
+      <bind nodeset="/data/harvest/harvest_group_intermediate/harvest_advanced" type="select1" required="true()" relevant="(selected(/data/harvest/harvest_intermediate, 'true'))"/>
+      <bind nodeset="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_advanced" type="select1" required="true()" relevant="(selected(/data/harvest/harvest_intermediate, 'true')) and (selected(/data/harvest/harvest_group_intermediate/harvest_advanced, 'true'))"/>
+      <bind nodeset="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced:requiredMsg')" relevant="(selected(/data/harvest/harvest_intermediate, 'true')) and (selected(/data/harvest/harvest_group_intermediate/harvest_advanced, 'true'))" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced:constraintMsg')"/>
+      <bind nodeset="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced:requiredMsg')" relevant="(selected(/data/harvest/harvest_intermediate, 'true')) and (selected(/data/harvest/harvest_group_intermediate/harvest_advanced, 'true'))" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced:constraintMsg')"/>
       <bind nodeset="/data/irrigation/irrigation_done" type="select1" required="true()"/>
       <bind nodeset="/data/irrigation/irrigation_intermediate" type="select1" required="true()"/>
-      <bind nodeset="/data/irrigation/irrigation_level_intermediate" relevant="(${irrigation_intermediate} = 'true')"/>
-      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_speed" type="int" required="true()" jr:requiredMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_speed:requiredMsg')" relevant="(${irrigation_intermediate} = 'true')" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_speed:constraintMsg')"/>
-      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_advanced" type="select1" required="true()" relevant="(${irrigation_intermediate} = 'true')"/>
-      <bind nodeset="/data/irrigation/irrigation_level_advanced" relevant="(${irrigation_advanced} = 'true')"/>
-      <bind nodeset="/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced:requiredMsg')" relevant="(${irrigation_advanced} = 'true') and (${planting_method} = 2)" constraint="(${planting_date} &lt; ${irrigation_transfer_date_advanced})" jr:constraintMsg="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced:constraintMsg')"/>
-      <bind nodeset="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:requiredMsg')" relevant="(${irrigation_advanced} = 'true')"/>
-      <bind nodeset="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced" type="string" relevant="(${irrigation_advanced} = 'true')"/>
+      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_speed" type="int" required="true()" jr:requiredMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_speed:requiredMsg')" relevant="(selected(/data/irrigation/irrigation_intermediate, 'true'))" constraint="(. &gt; '0')" jr:constraintMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_speed:constraintMsg')"/>
+      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_advanced" type="select1" required="true()" relevant="(selected(/data/irrigation/irrigation_intermediate, 'true'))"/>
+      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced" type="date" required="true()" jr:requiredMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced:requiredMsg')" relevant="(selected(/data/irrigation/irrigation_intermediate, 'true')) and (selected(/data/irrigation/irrigation_level_intermediate/irrigation_advanced, 'true'))" jr:constraintMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced:constraintMsg')"/>
+      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced" type="int" required="true()" jr:requiredMsg="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:requiredMsg')" relevant="(selected(/data/irrigation/irrigation_intermediate, 'true')) and (selected(/data/irrigation/irrigation_level_intermediate/irrigation_advanced, 'true'))"/>
+      <bind nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced" type="string" relevant="(selected(/data/irrigation/irrigation_intermediate, 'true')) and (selected(/data/irrigation/irrigation_level_intermediate/irrigation_advanced, 'true'))"/>
     </model>
   </h:head>
   <h:body>
@@ -1648,11 +1649,11 @@
         <label ref="jr:itext('/data/technical_assistant/assistant_sex:label')"/>
         <item>
           <label ref="jr:itext('/data/technical_assistant/assistant_sex:option0')"/>
-          <value>1</value>
+          <value>m</value>
         </item>
         <item>
           <label ref="jr:itext('/data/technical_assistant/assistant_sex:option1')"/>
-          <value>2</value>
+          <value>f</value>
         </item>
       </select1>
       <select1 ref="/data/technical_assistant/assistant_country">
@@ -1712,11 +1713,11 @@
         <label ref="jr:itext('/data/farmer/farmer_sex:label')"/>
         <item>
           <label ref="jr:itext('/data/farmer/farmer_sex:option0')"/>
-          <value>1</value>
+          <value>m</value>
         </item>
         <item>
           <label ref="jr:itext('/data/farmer/farmer_sex:option1')"/>
-          <value>2</value>
+          <value>f</value>
         </item>
       </select1>
       <select1 ref="/data/farmer/farmer_country">
@@ -1749,6 +1750,9 @@
     </group>
     <group>
       <label ref="jr:itext('/data/farm:label')"/>
+      <input ref="/data/farm/farm_id">
+        <label ref="jr:itext('/data/farm/farm_id:label')"/>
+      </input>
       <input ref="/data/farm/farm_name">
         <label ref="jr:itext('/data/farm/farm_name:label')"/>
       </input>
@@ -1921,13 +1925,13 @@
             <value>false</value>
           </item>
         </select1>
-      </group>
-      <group>
-        <label ref="jr:itext('/data/production_event/production_event_advanced:label')"/>
-        <input ref="/data/production_event/production_event_advanced/humidity">
-          <label ref="jr:itext('/data/production_event/production_event_advanced/humidity:label')"/>
-          <hint ref="jr:itext('/data/production_event/production_event_advanced/humidity:hint')"/>
-        </input>
+        <group>
+          <label ref="jr:itext('/data/production_event/production_event_intermediate/production_event_advanced:label')"/>
+          <input ref="/data/production_event/production_event_intermediate/production_event_advanced/humidity">
+            <label ref="jr:itext('/data/production_event/production_event_intermediate/production_event_advanced/humidity:label')"/>
+            <hint ref="jr:itext('/data/production_event/production_event_intermediate/production_event_advanced/humidity:hint')"/>
+          </input>
+        </group>
       </group>
     </group>
     <group>
@@ -2008,12 +2012,12 @@
             <value>false</value>
           </item>
         </select1>
-      </group>
-      <group>
-        <label ref="jr:itext('/data/phenological_cycle/phenological_cycle_advanced:label')"/>
-        <input ref="/data/phenological_cycle/phenological_cycle_advanced/overseeding">
-          <label ref="jr:itext('/data/phenological_cycle/phenological_cycle_advanced/overseeding:label')"/>
-        </input>
+        <group>
+          <label ref="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced:label')"/>
+          <input ref="/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding">
+            <label ref="jr:itext('/data/phenological_cycle/phenological_cycle_intermediate/phenological_cycle_advanced/overseeding:label')"/>
+          </input>
+        </group>
       </group>
     </group>
     <group>
@@ -2493,24 +2497,35 @@
             <value>untitled</value>
           </item>
         </select>
-      </group>
-      <group>
-        <label ref="jr:itext('/data/harvest/harvest_group_advanced:label')"/>
-        <repeat nodeset="/data/harvest/harvest_group_advanced">
-          <select1 ref="/data/harvest/harvest_group_advanced/harvest_products_advanced">
-            <label ref="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_advanced:label')"/>
-            <item>
-              <label ref="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_advanced:option0')"/>
-              <value>untitled</value>
-            </item>
-          </select1>
-          <input ref="/data/harvest/harvest_group_advanced/harvest_products_count_advanced">
-            <label ref="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_count_advanced:label')"/>
-          </input>
-          <input ref="/data/harvest/harvest_group_advanced/harvest_products_weight_advanced">
-            <label ref="jr:itext('/data/harvest/harvest_group_advanced/harvest_products_weight_advanced:label')"/>
-          </input>
-        </repeat>
+        <select1 ref="/data/harvest/harvest_group_intermediate/harvest_advanced">
+          <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_advanced:label')"/>
+          <item>
+            <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_advanced:option0')"/>
+            <value>true</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_advanced:option1')"/>
+            <value>false</value>
+          </item>
+        </select1>
+        <group>
+          <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced:label')"/>
+          <repeat nodeset="/data/harvest/harvest_group_intermediate/harvest_group_advanced">
+            <select1 ref="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_advanced">
+              <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_advanced:label')"/>
+              <item>
+                <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_advanced:option0')"/>
+                <value>untitled</value>
+              </item>
+            </select1>
+            <input ref="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced">
+              <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_count_advanced:label')"/>
+            </input>
+            <input ref="/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced">
+              <label ref="jr:itext('/data/harvest/harvest_group_intermediate/harvest_group_advanced/harvest_products_weight_advanced:label')"/>
+            </input>
+          </repeat>
+        </group>
       </group>
     </group>
     <group>
@@ -2553,22 +2568,22 @@
             <value>false</value>
           </item>
         </select1>
-      </group>
-      <group>
-        <label ref="jr:itext('/data/irrigation/irrigation_level_advanced:label')"/>
-        <input ref="/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced">
-          <label ref="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_transfer_date_advanced:label')"/>
-        </input>
         <group>
-          <label ref="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced:label')"/>
-          <repeat nodeset="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced">
-            <input ref="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced">
-              <label ref="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:label')"/>
-            </input>
-            <input ref="/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced">
-              <label ref="jr:itext('/data/irrigation/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced:label')"/>
-            </input>
-          </repeat>
+          <label ref="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced:label')"/>
+          <input ref="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced">
+            <label ref="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_transfer_date_advanced:label')"/>
+          </input>
+          <group>
+            <label ref="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced:label')"/>
+            <repeat nodeset="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced">
+              <input ref="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced">
+                <label ref="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_level_advanced:label')"/>
+              </input>
+              <input ref="/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced">
+                <label ref="jr:itext('/data/irrigation/irrigation_level_intermediate/irrigation_level_advanced/irrigation_sheet_advanced/irrigation_sheet_description_advanced:label')"/>
+              </input>
+            </repeat>
+          </group>
         </group>
       </group>
     </group>
