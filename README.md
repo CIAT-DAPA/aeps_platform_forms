@@ -6,4 +6,8 @@
 FLAR Collect permite recolectar datos de manejo agronómico y costos de producción del cultivo de arroz a través de dispositivos móviles sin necesidad de conexión a internet. La herramienta permite registrar variables relacionadas con la preparación del terreno, siembra, fertilización, manejo de plagas y enfermedades, manejo de malezas, riego y disponibilidad de agua, cosecha, pos-cosecha y comercialización
 
 
+# Organización de carpetas
 
+Este repositorio tiene las siguientes carpetas.
+
+- odk. Están el archivo de FLAR Collect xlsx y el manual de la herramienta.
